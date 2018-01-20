@@ -1,0 +1,9 @@
+//
+//  user-config.xcconfig
+//  ARToolKit6 Camera Calibration Utility
+//
+//  Created by Philip Lamb on 10/05/17.
+//  Copyright © 2017 artoolkit.org. All rights reserved.
+//
+
+VERSION=6.0.2

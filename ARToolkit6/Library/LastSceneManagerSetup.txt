@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ARToolKit-Unity/Test Scenes/ImageTarget.unity
+  isLoaded: 1
+  isActive: 1

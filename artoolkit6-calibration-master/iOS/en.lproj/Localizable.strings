@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  ARToolKit5iOS private
+
+  Created by Philip Lamb on 26/08/15.
+
+*/
+
+"Intro" = "Welcome to ARToolKit Camera Calibrator\n(c)2017 DAQRI LLC.\n\nTap '+' to begin a calibration run.\n\nTap the menu button for settings and help.";
+"VideoOpenError" = "Welcome to ARToolKit Camera Calibrator\n(c)2017 DAQRI LLC.\n\nUnable to open video source.\n\nTap the menu button for settings and help.";
+"Reintro" = "Tap '+' to begin a calibration run.\n\nTap the menu button for settings and help.";
+"CalibCapturing" = "Capturing image %d/%d";
+"CalibCanceled" = "Calibration canceled";
+"CalibCalculating" = "Calculating camera parameters...";
+"CalibResults" = "Camera parameters calculated (error min=%.3f, avg=%.3f, max=%.3f)";

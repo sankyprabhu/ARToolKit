@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ARViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdh-iX-UfY">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="5Jh-UL-vGA">
+                                        <connections>
+                                            <action selector="handleBackButton:" destination="BV1-FR-VrT" id="S9O-NW-x0J"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="P5n-LJ-2Ed"/>
+                                    <barButtonItem style="plain" systemItem="add" id="gJC-wA-aNX">
+                                        <connections>
+                                            <action selector="handleAddButton:" destination="BV1-FR-VrT" id="Gnt-3r-cvU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wK0-ka-K9C"/>
+                                    <barButtonItem image="reveal-icon.png" id="pu1-dT-1da">
+                                        <connections>
+                                            <action selector="handleMenuButton:" destination="BV1-FR-VrT" id="kV1-ys-CzG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCo-pf-91y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="p0W-7b-8xz"/>
+                                </connections>
+                            </glkView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gCo-pf-91y" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="8AF-Qg-fYb"/>
+                            <constraint firstItem="gCo-pf-91y" firstAttribute="bottom" secondItem="zdh-iX-UfY" secondAttribute="top" id="MHP-sV-ims"/>
+                            <constraint firstAttribute="trailing" secondItem="gCo-pf-91y" secondAttribute="trailing" id="Tg5-5j-orb"/>
+                            <constraint firstItem="zdh-iX-UfY" firstAttribute="bottom" secondItem="qHh-Mt-9TT" secondAttribute="top" id="gc8-lz-qQE"/>
+                            <constraint firstItem="gCo-pf-91y" firstAttribute="trailing" secondItem="zdh-iX-UfY" secondAttribute="trailing" id="lm8-oS-DoP"/>
+                            <constraint firstItem="gCo-pf-91y" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="uj2-JS-Zjb"/>
+                            <constraint firstItem="gCo-pf-91y" firstAttribute="leading" secondItem="zdh-iX-UfY" secondAttribute="leading" id="xyd-uv-NXr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="glkView" destination="gCo-pf-91y" id="685-to-Y16"/>
+                        <outlet property="menuButton" destination="pu1-dT-1da" id="Qmh-ag-Ru0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="68.815592203898049"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reveal-icon.png" width="22" height="17"/>
+    </resources>
+</document>
